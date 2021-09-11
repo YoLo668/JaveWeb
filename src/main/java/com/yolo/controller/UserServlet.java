@@ -3,6 +3,7 @@ package com.yolo.controller;
 import com.yolo.domain.User;
 import com.yolo.service.UserService;
 import com.yolo.service.impl.UserServiceImpl;
+import com.yolo.util.MD5Util;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,13 +14,10 @@ import java.io.IOException;
 public class UserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //设置接受参数编码
-        request.setCharacterEncoding("utf-8");
-        //设置浏览器解析编码
-        response.setContentType("text/html;charset=utf-8");
+        System.out.println("进入到用户登录");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-
+        password = MD5Util.getMD5(password);
         UserService userService = new UserServiceImpl();
 
         User user = userService.userLogin(username, password);

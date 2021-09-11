@@ -18,4 +18,13 @@ public class UserServiceImpl implements UserService {
 
         return user;
     }
+
+    @Override
+    public int addUser(String username, String password) {
+        int count = 0;
+
+        count = userDao.addUser(username,password);
+
+        return count;
+    }
 }
