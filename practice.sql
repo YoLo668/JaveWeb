@@ -11,7 +11,7 @@
  Target Server Version : 80026
  File Encoding         : 65001
 
- Date: 11/09/2021 17:19:15
+ Date: 13/09/2021 09:38:15
 */
 
 SET NAMES utf8mb4;
@@ -31,5 +31,6 @@ CREATE TABLE `t_user`  (
 -- ----------------------------
 INSERT INTO `t_user` VALUES ('yolo', '202cb962ac59075b964b07152d234b70');
 INSERT INTO `t_user` VALUES ('asdasdas', 'f5bb0c8de146c67b44babbf4e6584cc0');
+INSERT INTO `t_user` VALUES ('shangao', 'efd8d8f4ffa9ced271f3da186aa32d97');
 
 SET FOREIGN_KEY_CHECKS = 1;
